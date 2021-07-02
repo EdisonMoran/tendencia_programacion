@@ -1,49 +1,41 @@
-<?php
+<body>
+    <?php
+    if (!isset($_POST["datos"])) {
+        ?>  
+        <h3>Triangulo</h3>
+        <h2>Area</h2>
+        <form method="post"action="triangulo.php">
+            <input type="hidden" name="datos" value="12345">
+            BASE:<input type="text" name="base"><br>
+            ALTURA:<input type="text" name="altura"><br>
+            <h2>Perimetro</h2>
+            LADO_1:<input type="text" name="lado1"><br>
+            LADO_2:<input type="text" name="lado2"><br>
+            LADO_3:<input type="text" name="lado3"><br>
+            <input type="submit" value="calcular">
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-class CRectangulo{
-    private $largo; // atributos
-    private $ancho;
-    function CRectangulo(){
-        // es la funcion del constructor 
-        $this->largo = 0; // atributos
-        $this->ancho = 0;
-        
+        </form>
+        <?php
+    } else {
+        $base = $_POST["base"];
+        $altura = $_POST["altura"];
+        $lado_1 = $_POST["lado1"];
+        $lado_2 = $_POST["lado2"];
+        $lado_3 = $_POST["lado3"];
+        $area = ($base * $altura) / 2;
+        $perimetro = ($lado_1 + $lado_2 + $lado_3);
+        echo "<h3>resultado del area</h3>";
+        echo "base = $base <br> ";
+        echo "altura = $altura<br> ";
+        echo "area = $area <br> ";
+        echo "<h3>resultado del Perimetro</h3>";
+        echo "lado_1 = $lado_1 <br> ";
+        echo "lado_2 = $lado_2<br> ";
+        echo "lado_3 = $lado_3 <br> ";
+        echo "Perimetro = $perimetro <br> ";
+        echo "<a href='triangulo.php'>Nuevo Calculo</a>";
     }
-    public function get_formulario(){ // metodos POST - GET - PUT - DELETE
-        $html = '
-                <form name= "transporte" action="" method="POST"> 
-                    <table aling = "center" border = "1">
-                        <tr>
-                            <td colspan="2">RECTANGULO</td>
-                        </tr>
-                        <tr>
-                            <td>Largo</td>
-                            <td><input type="text" name="largo" size=4></td>
-                        </tr>
-                        <tr>
-                            <td>Ancho</td>
-                            <td><input type="text" name="ancho" size=4></td>
-                        </tr>
-                        <tr aling = "center">
-                            <td aling = "center" colspan= "2" ><center><input type="submit" name="guardar" value="Resolver"></center></td>
-                        </tr>
-                    </table>
-                </form>';
-        return $html;
-    }
-    public function area($largo,$ancho){ // metodos area
-        $area = $largo * $ancho;
-        return $area;
-    }
-    public function perimetro($largo,$ancho){ // método perimetro 
-        $perimetro = ($largo*2)+($ancho*2);
-        return $perimetro;
-    }
-    
-    
-}
+    ?>
+
+</body>
+
