@@ -13,7 +13,6 @@
             LADO_2:<input type="text" name="lado2"><br>
             LADO_3:<input type="text" name="lado3"><br>
             <input type="submit" value="calcular">
-
         </form>
         <?php
     } else {
