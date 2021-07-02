@@ -2,22 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>tendencia</title>
+        <title>triangulo</title>
     </head>
     <body>
+         <?php
+                $nombres = "Lado";
+          ?>
        <div>
-            <h1 style="size: B4;text-align: center"> Hola mundo </h1>
-            <h2 style="size: B4;text-align: center"> Hola mundo </h2>    
-            <h3 style="size: B4;text-align: center"> Hola mundo </h3>   
-            <h4 style="size: B4;text-align: center"> Hola mundo </h4>  
-            <h5 style="size: B4;text-align: center"> Hola mundo </h5>
-            <h6 style="size: B4;text-align: center"> Hola mundo </h6>   
-            <h1 style="size: B4;text-align: center"> Hola mundo </h1>
-            <h2 style="size: B4;text-align: center"> Hola mundo </h2>    
-            <h3 style="size: B4;text-align: center"> Hola mundo </h3>   
-            <h4 style="size: B4;text-align: center"> Hola mundo </h4>  
-            <h5 style="size: B4;text-align: center"> Hola mundo </h5>
-            <h6 style="size: B4;text-align: center"> Hola mundo </h6>   
+           <tr>
+               <td style="width: 12%;background-color:cornflowerblue"border ="2px"><?php echo $nombres ?></td>
+                      
+           </tr>
+                       
         </div>
     </body>
 </html>
